@@ -1,0 +1,139 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import FadeIn from "../components/FadeIn";
+---
+
+<Layout title="About • NOBE">
+  <Nav />
+
+  <main class="pb-20">
+    <FadeIn client:load>
+      <header class="mt-10">
+        <p class="text-xs uppercase tracking-[0.22em] text-[#999999]">
+          About
+        </p>
+
+        <h1 class="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
+          About NOBE
+        </h1>
+
+        <p class="mt-4 max-w-3xl text-lg text-black/70 leading-relaxed">
+          The National Organization for Business and Engineering (NOBE) is a student-led organization at the
+          University of Michigan focused on working at the intersection of business and engineering.
+        </p>
+      </header>
+    </FadeIn>
+
+    <div class="mt-6 grid gap-4 md:grid-cols-2 max-w-3xl">
+  <!-- UMICH NOBE -->
+  <a
+    href="https://www.linkedin.com/company/nobeumich/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="rounded-2xl bg-[#00284d] p-5 text-white transition hover:opacity-90"
+  >
+    <p class="text-xs uppercase tracking-[0.22em] text-white/70">
+      linkedin
+    </p>
+    <h3 class="mt-2 text-lg font-semibold">
+      NOBE at Michigan
+    </h3>
+  </a>
+
+  <!-- NATIONAL NOBE -->
+  <a
+    href="https://www.linkedin.com/company/nobe/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="rounded-2xl bg-[#00284d] p-5 text-white transition hover:opacity-90"
+  >
+    <p class="text-xs uppercase tracking-[0.22em] text-white/70">
+      linkedin
+    </p>
+    <h3 class="mt-2 text-lg font-semibold">
+      NOBE National
+    </h3>
+  </a>
+</div>
+
+
+    <FadeIn client:load delay={0.08}>
+      <section class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="rounded-3xl border border-[#c1c1c1] bg-white p-8">
+          <h2 class="text-lg font-semibold">What we do</h2>
+          <p class="mt-3 text-black/70 leading-relaxed">
+            From client-facing projects with real partner organizations to professional development workshops and
+            curated networking opportunities, NOBE at Michigan offers students a practical way to explore how
+            strategy and technical execution come together in real-world contexts.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-[#c1c1c1] bg-white p-8">
+          <h2 class="text-lg font-semibold">Our community</h2>
+          <p class="mt-3 text-black/70 leading-relaxed">
+            NOBE at Michigan is a lean, collaborative team of students from a wide range of academic backgrounds.
+            Project teams are interdisciplinary, helping members learn to communicate and work
+            effectively across technical and non-technical domains.
+          </p>
+        </div>
+      </section>
+    </FadeIn>
+
+    <FadeIn client:load delay={0.16}>
+      <section class="mt-6 rounded-3xl border border-[#c1c1c1] bg-white p-8">
+        <p class="text-xs uppercase tracking-[0.22em] text-[#999999]">
+          Our chapter
+        </p>
+
+        <h2 class="mt-3 text-2xl font-semibold">
+          Connected nationally, rooted at Michigan.
+        </h2>
+
+        <p class="mt-3 max-w-3xl text-black/70 leading-relaxed">
+          As a chapter of the national NOBE organization, our club benefits from access to a broader network of
+          chapters, resources, and alumni while remaining deeply connected to the University of Michigan. We are
+          also affiliated with the University of Michigan School of Information (UMSI), which supports our
+          interdisciplinary mission and project-based approach.
+        </p>
+
+        <div class="mt-6 rounded-2xl bg-[#93a3b4]/20 p-4">
+          <p class="text-sm text-black/80">
+            Semester-long, solution-driven projects that result in structured, client-ready deliverables.
+          </p>
+        </div>
+      </section>
+    </FadeIn>
+
+    <FadeIn client:load delay={0.24}>
+      <section class="mt-10 rounded-3xl bg-[#00284d] p-8 text-white">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 class="text-2xl font-semibold">Interested in joining NOBE?</h2>
+            <p class="mt-2 text-white/80">
+              Join NOBE to gain hands-on consulting experience and build interdisciplinary skills.
+            </p>
+          </div>
+
+          <div class="flex gap-3">
+            <a
+              href="/members"
+              class="rounded-full bg-white px-6 py-3 text-sm font-medium text-[#00284d] hover:bg-white/90 transition"
+            >
+              Join NOBE
+            </a>
+                <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=nobeumich@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center rounded-full border border-white/40 px-6 py-3 text-sm text-white hover:border-white hover:bg-white/10 transition"
+        >
+        Email us
+        </a>
+
+          </div>
+        </div>
+      </section>
+    </FadeIn>
+  </main>
+</Layout>

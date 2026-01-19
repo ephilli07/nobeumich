@@ -1,0 +1,146 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import FadeIn from "../components/FadeIn";
+---
+
+<Layout title="NOBE at Michigan">
+  <Nav />
+
+  <main class="pb-20">
+    <!-- HERO -->
+    <FadeIn client:load>
+      <section class="mt-10 grid gap-10 md:grid-cols-2 md:items-center">
+        <div>
+          <p class="text-xs uppercase tracking-[0.22em] text-[#999999]">
+            The University of Michigan
+          </p>
+
+          <h1 class="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
+            The intersection of business and engineering
+          </h1>
+
+          <p class="mt-5 text-lg text-black/70 leading-relaxed">
+            The National Organization for Business and Engineering (NOBE) is a student-run chapter offering hands-on consulting experiences alongside professional development workshops.
+         	Members gain exposure to both strategic thinking and technical problem-solving through real, applied work.
+		</p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="/members"
+              class="rounded-full bg-[#00284d] px-6 py-3 text-sm text-white hover:opacity-90 transition"
+            >
+              Join NOBE
+            </a>
+            <a
+              href="/about"
+              class="rounded-full border border-[#c1c1c1] px-6 py-3 text-sm hover:border-[#00284d] hover:text-[#00284d] transition"
+            >
+              Learn more
+            </a>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-6 text-sm text-black/60">
+            <div class="flex items-center gap-2">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#00284d]"></span>
+              <span>Client Consulting</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#00284d]"></span>
+              <span>Technical Execution</span>
+            </div>
+			<div class="flex items-center gap-2">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#00284d]"></span>
+              <span>Business Strategy</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="relative overflow-hidden rounded-3xl bg-[#f5f5f5]">
+          <img
+            src="/group.JPG"
+            alt="NOBE members"
+            class="h-full w-full object-cover transition duration-700 ease-out hover:scale-[1.02]"
+          />
+
+          <!-- subtle inner border -->
+          <div class="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-black/5"></div>
+        </div>
+
+
+
+		
+   
+      </section>
+    </FadeIn>
+
+    <!-- FEATURES -->
+    <FadeIn client:load delay={0.08}>
+      <section class="mt-12 grid gap-4 md:grid-cols-3">
+        <div class="rounded-3xl border border-[#c1c1c1] p-6">
+          <p class="text-xs uppercase tracking-[0.22em] text-[#999999]">
+            Integration
+          </p>
+          <h3 class="mt-3 text-lg font-semibold">Applied problem-solving</h3>
+          <p class="mt-2 text-sm text-black/70 leading-relaxed">
+            Learn to connect strategic thinking with technical problem-solving through consulting projects with real clients.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-[#c1c1c1] p-6">
+          <p class="text-xs uppercase tracking-[0.22em] text-[#999999]">
+            Network
+          </p>
+          <h3 class="mt-3 text-lg font-semibold">National connections</h3>
+          <p class="mt-2 text-sm text-black/70 leading-relaxed">
+            Engage with a national network of students, alumni, and professionals across campuses and industry.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-[#c1c1c1] p-6">
+          <p class="text-xs uppercase tracking-[0.22em] text-[#999999]">
+            Experience
+          </p>
+          <h3 class="mt-3 text-lg font-semibold">Learning by doing</h3>
+          <p class="mt-2 text-sm text-black/70 leading-relaxed">
+            Develop practical skills through hands-on work that reflect real-world expectations.
+          </p>
+        </div>
+      </section>
+    </FadeIn>
+
+    <!-- CTA -->
+    <FadeIn client:load delay={0.16}>
+      <section class="mt-12 rounded-3xl bg-[#00284d] p-8 text-white">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 class="text-2xl font-semibold">Interested in joining NOBE?</h2>
+            <p class="mt-2 text-white/80">
+              Join the student org integrating business and engineering into one practice.
+            </p>
+          </div>
+
+          <div class="flex gap-3">
+            <a
+              href="/members"
+              class="rounded-full bg-white px-6 py-3 text-sm font-medium text-[#00284d] hover:bg-white/90 transition"
+            >
+              Get involved
+            </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=nobeumich@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center rounded-full border border-white/40 px-6 py-3 text-sm text-white hover:border-white hover:bg-white/10 transition"
+              >
+                Email us
+              </a>
+
+          </div>
+        </div>
+      </section>
+    </FadeIn>
+  </main>
+</Layout>
+

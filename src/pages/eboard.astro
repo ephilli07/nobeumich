@@ -1,0 +1,163 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import FadeIn from "../components/FadeIn";
+
+
+const CO_PRESIDENTS = [
+  {
+    name: "Noelle Whitmore",
+    role: "Co-President",
+    majors: "Industrial & Operations Engineering",
+    colleges: "College of Engineering",
+    image: "/eboard/Noelle.JPEG",
+  },
+  {
+    name: "Elizabeth Phillips",
+    role: "Co-President",
+    majors: "Computer Science",
+    colleges: "College of Literature, Science, and the Arts",
+    image: "/eboard/Elizabeth.jpg",
+  },
+];
+
+const VICE_PRESIDENTS = [
+  {
+    name: "Aayush Sharma",
+    role: "VP Consulting",
+    majors: "Aerospace Engineering",
+    colleges: "College of Engineering",
+    image: "/eboard/Aayush.JPEG",
+  },
+  {
+    name: "Alicia Emmert-Buck",
+    role: "VP Operations",
+    majors: "Biomedical Engineering",
+    colleges: "College of Engineering",
+    image: "/eboard/Alicia.jpg",
+  },
+  {
+    name: "Martin Piedrahita",
+    role: "VP Development",
+    majors: "Industrial & Operations Engineering",
+    colleges: "College of Engineering",
+    image: "/eboard/Martin.jpg",
+  },
+  {
+    name: "Jihyo Yoo",
+    role: "VP Marketing",
+    majors: "Industrial & Operations Engineering",
+    colleges: "College of Engineering",
+    image: "/eboard/Jihyo.jpg",
+  },
+  {
+    name: "Jaden Dahan",
+    role: "VP Finance",
+    majors: "Mechanical Engineering; Economics",
+    colleges: "College of Engineering; College of Literature, Science, and the Arts",
+    image: "/eboard/Jaden.jpg",
+  },
+];
+---
+
+<Layout title="E-Board • NOBE">
+  <Nav />
+
+  <main class="pb-20">
+    <FadeIn client:load>
+      <header class="mt-10">
+        <p class="text-xs uppercase tracking-[0.22em] text-[#999999]">
+          Leadership
+        </p>
+
+        <h1 class="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
+          Meet the E-Board
+        </h1>
+
+        <p class="mt-4 max-w-3xl text-lg text-black/70 leading-relaxed">
+            Meet the students serving on NOBE’s current Executive Board.
+        </p>
+      </header>
+    </FadeIn>
+
+    <FadeIn client:load delay={0.08}>
+      <section class="mt-12">
+        <p class="text-xs uppercase tracking-[0.22em] text-[#999999]">
+          Co-Presidents
+        </p>
+
+        <div class="mt-6 grid gap-6 sm:grid-cols-2 max-w-3xl">
+          {CO_PRESIDENTS.map((p) => (
+            <div class="group">
+              <div class="relative overflow-hidden rounded-3xl bg-[#f5f5f5]">
+                <img
+                  src={p.image}
+                  alt={`${p.name} headshot`}
+                  class="aspect-4/5 w-full object-cover transition duration-700 ease-out group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+                <div class="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-black/5"></div>
+              </div>
+
+              <div class="mt-4">
+                <p class="text-xs uppercase tracking-[0.22em] text-[#999999]">
+                  {p.role}
+                </p>
+                <h2 class="mt-2 text-lg font-semibold tracking-tight">
+                  {p.name}
+                </h2>
+                <p class="mt-2 text-sm text-black/70 leading-relaxed">
+                  {p.majors}
+                </p>
+                <p class="mt-1 text-sm text-black/50 leading-relaxed">
+                  {p.colleges}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </FadeIn>
+
+    <FadeIn client:load delay={0.16}>
+      <section class="mt-12">
+        <p class="text-xs uppercase tracking-[0.22em] text-[#999999]">
+          Vice Presidents
+        </p>
+
+        <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {VICE_PRESIDENTS.map((p) => (
+            <div class="group">
+              <div class="relative overflow-hidden rounded-3xl bg-[#f5f5f5]">
+                <img
+                  src={p.image}
+                  alt={`${p.name} headshot`}
+                  class="aspect-4/5 w-full object-cover transition duration-700 ease-out group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+                <div class="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-black/5"></div>
+              </div>
+
+              <div class="mt-4">
+                <p class="text-xs uppercase tracking-[0.22em] text-[#999999]">
+                  {p.role}
+                </p>
+                <h3 class="mt-2 text-lg font-semibold tracking-tight">
+                  {p.name}
+                </h3>
+                <p class="mt-2 text-sm text-black/70 leading-relaxed">
+                  {p.majors}
+                </p>
+                <p class="mt-1 text-sm text-black/50 leading-relaxed">
+                  {p.colleges}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </FadeIn>
+
+    
+  </main>
+</Layout>
